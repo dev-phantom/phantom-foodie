@@ -1,41 +1,62 @@
-    $(document).ready(function() {
-        $(window).on('load', function() {          
-        $(document).on('click', '.navbar-toggle', function() {
-            $('.navbar-collapse').slideToggle(300);
-            return false;
-        }).on('click', '.navigation-menu > li > a', function() {
-            $('.navbar-collapse').slideUp(300);
-        }).on('click', '.next-section', function() {
-            fullpage_api.moveSectionDown();
-        });
-        $('.facts-row').on('inview', function(event, isInView) {
-            $('.count-number').each(function() {
-                $(this).prop('Counter', 0).animate({
-                    Counter: $(this).text()
-                }, {
-                    duration: 1000,
-                    easing: 'swing',
-                    step: function(now) {
-                        $(this).text(Math.ceil(now));
-                    }
-                });
-                setTimeout(function() {
-                    $('.count-number').removeClass('count-number').addClass('counted');
-                }, 1000);
-            });
-        });
-        $('.skills-row').on('inview', function(event, isInView) {
-            $(this).addClass('view');
-        });
-        $(document).on('click', '.menu-trigger', function() {
-            $('body').toggleClass('sidemenu-open');
-        }).on('click', '.side-menu .navbar-nav li a', function() {
-            $('body').removeClass('sidemenu-open');
-        });
+$(function(){
+    $(".navbar-toggle").click(function(){
+         $('.navbar-collapse').slideToggle(500);
+         return false;
     });
-    });
-    $(document).on('click', '.theme', function() {
-    $("body").css({
-        "background" : "gray",
-    });
-    });
+});
+window.onload = () => {
+    let body = document.getElementsByTagName("body")[0];
+    let menu, about, opening, contact, menuTitle, foodDecription, openingHour, dateTime, phones, tim, headText, footer,phone, border;
+    menu = document.querySelector('.menu');
+    opening = document.querySelector('.opening');
+    contact = document.querySelector('.contact');
+    menuTitle = document.querySelector(".menu-title");
+    foodDecription = document.querySelector(".food-decription1");
+    openingHour = document.querySelector(".opening-hour");
+    dateTime = document.querySelector(".date-time");
+    tim = document.querySelector("#tim"); 
+    headText = document.querySelector(".head-text");
+    footer = document.querySelector("footer");
+    phone = document.getElementsByTagName('label');
+    link = document.getElementsByTagName('a');
+    border = document.getElementsByTagName('button');
+    icon = document.getElementsByTagName("i");
+    phones = document.getElementsByClassName(".con");
+    let theme = document.querySelector(".theme");
+    theme.onclick = e => {
+        body.style.backgroundColor = "#eee";
+        body.style.color = "#000";
+        menu.style.backgroundColor = "#bdbdbd";
+        menu.style.color = "#000";
+        opening.style.backgroundColor = "#bdbdbd";
+        opening.style.color = "#000";
+        contact.style.backgroundColor = "#bdbdbd";
+        contact.style.color = "#000";
+
+        menuTitle.style.color = "#EF6C00";
+        foodDecription.style.color = "#000";
+        openingHour.style.color = "#EF6C00";
+        dateTime.style.color = "#000";
+        tim.style.color = "#000";
+        headText.style.color = "#000";
+        footer.style.color = "#000";
+
+        for (let i = 0; i < phone.length; i++) {
+            phone[i].style.color = "#000";        
+        }
+        for (let i = 0; i < link.length; i++) {
+            link[i].style.color = "#000";        
+        }
+        for (let i = 0; i < icon.length; i++) {
+            icon[i].style.color = "#000";        
+        }
+        for (let i = 0; i < phones.length; i++) {
+            phones[i].style.color = "#000";        
+        }
+        for (let i = 0; i < border.length; i++) {
+            border[i].style.borderColor = "#000";        
+            border[i].style.color = "#000";        
+        }
+        e.preventDefault()
+    }
+}
