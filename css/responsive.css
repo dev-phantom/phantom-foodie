@@ -80,20 +80,9 @@
 		border-bottom-right-radius: 1.5rem;
 	}
 	.head-text{
-		color: #ffe0b2;
-		border: none;
-		border-radius: 3rem;
-		padding-left: 0;
-		padding-right: 0;
-		font-family: ubuntu;
-		font-weight: bolder;
-		font-size: 2rem;
+		display: none;
 	  }
-	  .head-text:hover{
-		color: #fff;
-		border: none;
-		background: none;
-	}
+
 	.about{
 		height: max-content;
 		width: 90%;
