@@ -90,6 +90,15 @@ a#logo {
   -webkit-transform:scale(1);
   transform:scale(1);
 }
+.theme{
+  color:#ffecb3;
+  outline: none;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+}
+
 .head-text{
   color: #ffecb3;
   font-family: ubuntu;
@@ -179,10 +188,14 @@ main {
 
 .food:nth-child(2) {
   background: url("/img/food1.png") center top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .food:nth-child(3) {
   background: url("/img/food1.png") center top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .see-more{
   outline: none;
@@ -400,22 +413,3 @@ input{
     padding: 1rem;
     color: #fff;
   }
-  .theme{
-      outline: none;
-      margin: 1rem 0rem 1rem 0rem;
-      width: 18rem;
-      height: 3rem;
-      color: orange;
-      background: unset;
-      border: 3px solid #fff;
-      outline: none;
-      border-radius: 2rem;
-    }
-    .theme:hover{
-      outline: none;
-      border: 3px solid orangered;
-      color: #000;
-      border-radius: 2rem;
-      transition: all 1s ease-in-out;
-    }
-  
